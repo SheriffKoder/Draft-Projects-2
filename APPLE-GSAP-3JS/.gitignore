@@ -25,3 +25,4 @@ dist-ssr
 
 .env
 contents.js
+/public/assets/videos
