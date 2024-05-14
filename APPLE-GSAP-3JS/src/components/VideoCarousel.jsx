@@ -3,6 +3,8 @@
 
 /*
 
+basically the videoId is 0, then onEnd attr on the video it sets videoId+1 by the switch case
+
 so we have three ref arrays
 videoRef holding refs for video elements
 videoDivRef which is a grey dot holding refs for these .map dots
