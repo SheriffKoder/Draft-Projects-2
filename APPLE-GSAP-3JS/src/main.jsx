@@ -9,17 +9,28 @@ import * as Sentry from "@sentry/react";
 Sentry.init({
   dsn: "https://760fd7e6fe8dd62f05bf5125efe94efc@o4507264019333120.ingest.de.sentry.io/4507264022544464",
   integrations: [
-    Sentry.browserTracingIntegration(),
-    Sentry.replayIntegration(),
+      // See docs for support of different versions of variation of react router
+      // https://docs.sentry.io/platforms/javascript/guides/react/configuration/integrations/react-router/
+    Sentry.reactRouterV6BrowserTracingIntegration({
+        useEffect: React.useEffect,
+        
+    }),
+    Sentry.replayIntegration()
   ],
-  // Performance Monitoring
-  tracesSampleRate: 1.0, //  Capture 100% of the transactions
-  // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+
+  // Set tracesSampleRate to 1.0 to capture 100%
+  // of transactions for performance monitoring.
+  tracesSampleRate: 1.0,
+
+  // Set `tracePropagationTargets` to control for which URLs distributed tracing should be enabled
   tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
-  // Session Replay
-  replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
-  replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+
+  // Capture Replay for 10% of all sessions,
+  // plus for 100% of sessions with an error
+  replaysSessionSampleRate: 0.1,
+  replaysOnErrorSampleRate: 1.0,
 });
+
 
 // const container = document.getElementById(“app”);
 // const root = createRoot(container);

@@ -1,12 +1,24 @@
 
-/*
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
+
+// used in @Features
+export const animateithGsap = (target, animationProps, scrollProps) => {
+    gsap.to(target, {
+        ...animationProps,
+        scrollTrigger: {
+            trigger: target,
+            toggleActions: "restart reverse restart reverse",           //enter leave enter-back leave-back
+            start: "top 85%",
+            ...scrollProps,
+        }
+    })
+}
 
 
 
-
-*/
-
-
+// used in @Model
 export const animateWithGsapTimeline = (
     timeline, rotationRef, rotationState, firstTarget, secondTarget, animationProps
 ) => {

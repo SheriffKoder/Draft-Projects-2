@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-.env
-contents.js
+*.env
+*contents.js
 /public/assets/videos
+# Sentry Config File
+.env.sentry-build-plugin
