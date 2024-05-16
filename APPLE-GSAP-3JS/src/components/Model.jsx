@@ -43,16 +43,30 @@ const Model = () => {
     // change between models
     const tl = gsap.timeline();
 
+    // animateWithGsapTimeline is an external function
     useEffect(()=> {
         if (size === "large") {
             // passing small because we want to animate to the small from the large
             //translate to remove from view
+            // we get the small model, then rotate by the value stored in the smallRotation
+            // animate the small model view to the left
+            // animate the large model view to the center
             animateWithGsapTimeline(tl, small, smallRotation, "#view1", "#view2", 
-                {transform: "translateX(-100%)"}
+                {
+                    transform: "translateX(-100%)",
+                    duration: 2.
+                },
             );
         }
         if (size === "small") {
-
+            // display the large model and the large rotation
+            // animate from view2 to view1
+            animateWithGsapTimeline(tl, large, largeRotation, "#view2", "#view1", 
+            {
+                transform: "translateX(0)",
+                duration: 2.
+            },
+        );
         }
 
     },[size]);
@@ -102,7 +116,7 @@ const Model = () => {
                   
                     eventSource={document.getElementById("root")}
                     >
-                        <View.Port/>
+                        {/* <View.Port/> */}
                     </Canvas>
                 </div>
 
