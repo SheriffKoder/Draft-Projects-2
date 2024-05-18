@@ -1,5 +1,9 @@
 # WebGL Fluid Simulation
 
+`The project originaly developed by Pavel Dobryakov on Github
+I added some adjustments to be able to use it in react
+and understand how to adjust it more to my liking`
+
 [Play here](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
 
 <img src="/screenshot.jpg?raw=true" width="880">
