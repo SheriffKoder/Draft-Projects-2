@@ -1,0 +1,73 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  min-height: 100vh;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  background-image: radial-gradient(ellipse at top left, #7f50e4, #4c05d0);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  /* text-align: center; */
+  color: #e6ddf9;
+}
+
+
+
+/* ////////////////////////////// */
+
+/* .myDiv {
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+}
+.myImage {
+  width: 100%;
+  height: 100%;
+} */
+
+html, body {
+  overflow: hidden;
+  /* background-color: #000; */
+}
+
+body {
+  margin: 0;
+  /* position: fixed; */
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 0;
+}
+
+main {
+  color: white;
+  /* background-color: rgba(255, 0, 0, 0.082); */
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top:0;
+  left: 0;
+}
