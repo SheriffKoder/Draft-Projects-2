@@ -1,8 +1,16 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# GSAP & Three.js Apple Website
 
-Currently, two official plugins are available:
+Project tutorial to replicate the style of Apple websites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`Built with`: React-Vite
+`Libraries used`: Gsap, Three, Three/drei, Three-fiber
+
+**Main ideas:**
+- animate text with Gsap
+- use videos and control them with Gsap
+- display 3d models, switch between them and change their properties (size, color)
+- switch between videos depending on the progress and show their progress while playing
+
+
+>Source [JavaScript Mastery](https://www.youtube.com/watch?v=kRQbRAJ4-Fs&t=94s)

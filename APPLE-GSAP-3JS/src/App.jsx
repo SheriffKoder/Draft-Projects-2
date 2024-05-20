@@ -7,6 +7,8 @@ import Model from "./components/Model"
 // sentry
 import * as Sentry from "@sentry/react";
 import Features from "./components/Features";
+import HowItWorks from "./components/HowItWorks";
+import Footer from "./components/footer";
 
 
 
@@ -29,6 +31,8 @@ const App = () => {
       <Highlights />
       <Model />
       <Features />
+      <HowItWorks />
+      <Footer />
     </main>
   )
 }

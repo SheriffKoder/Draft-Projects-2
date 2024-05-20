@@ -116,7 +116,7 @@ const Model = () => {
                   
                     eventSource={document.getElementById("root")}
                     >
-                        {/* <View.Port/> */}
+                        <View.Port/>
                     </Canvas>
                 </div>
 
